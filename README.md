@@ -7,5 +7,10 @@
 The @Transactional annotation in the OrderService class is used to manage database transactions declaratively in a Spring application. If a method in the OrderService performs multiple database operations (e.g., creating an order, updating inventory, and recording a payment), @Transactional ensures that these operations are treated as a single transaction. If any operation fails, all changes are rolled back.
 
 
+@LoadBalanced:
+
+This annotation adds load-balancing capabilities to the WebClient.Builder. It allows the WebClient to resolve service names (e.g., inventory-service) into multiple instances and distribute the requests across them.
+
+
 
 
