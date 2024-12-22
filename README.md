@@ -91,23 +91,6 @@ Can be implemented on the client-side (via Ribbon, WebClient) or server-side (e.
 
 Serves as the single entry point for clients.
 Uses Eureka to discover services and may delegate request routing and load balancing.
-Comparison Table
-Feature	Load Balancer	Eureka	API Gateway
-Purpose	Distributes requests across instances.	Provides service discovery.	Acts as a single entry point for clients.
-Service Awareness	Works with registered instances.	Tracks and provides service instance details.	Uses Eureka or static routing for services.
-Traffic Distribution	Yes	No	Yes (indirectly through routing).
-Security	No	No	Yes (e.g., authentication, rate limiting).
-Request Transformation	No	No	Yes
-Tools	Nginx, HAProxy, AWS ELB, Ribbon	Netflix Eureka, Consul	Spring Cloud Gateway, Kong, Nginx
-Example Use Case
-Without These Components:
-Client directly calls http://192.168.1.1:8080 for inventory-service.
-If the IP changes or the instance crashes, the client can't recover.
-With Eureka + Load Balancer + API Gateway:
-Eureka: Registers inventory-service and provides a list of available instances.
-Load Balancer: Distributes requests to available instances.
-API Gateway: Client calls a single entry point (e.g., http://api.mysite.com/inventory) instead of individual instances.
-
 
 
 
