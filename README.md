@@ -11,7 +11,7 @@ The @Transactional annotation in the OrderService class is used to manage databa
 
 This annotation adds load-balancing capabilities to the WebClient.Builder. It allows the WebClient to resolve service names (e.g., inventory-service) into multiple instances and distribute the requests across them.
 
-1. Load Balancer
+**1. Load Balancer**
 Purpose:
 A Load Balancer is a component that distributes incoming requests across multiple instances of a service to achieve better scalability, reliability, and performance.
 
@@ -31,7 +31,8 @@ A Load Balancer (e.g., Nginx, AWS Elastic Load Balancer) routes requests like th
 Request 1 → 192.168.1.1
 Request 2 → 192.168.1.2
 Request 3 → 192.168.1.3
-2. Eureka (Service Discovery)
+
+**2. Eureka (Service Discovery)**
 Purpose:
 Eureka is a service discovery tool that helps microservices find and communicate with each other dynamically without hardcoding service locations (IP/Port).
 
@@ -49,7 +50,8 @@ Example:
 Registered Instances in Eureka:
 inventory-service → [192.168.1.1:8080, 192.168.1.2:8080, 192.168.1.3:8080]
 Order Service queries Eureka for inventory-service and gets the list of instances.
-3. API Gateway
+
+**3. API Gateway**
 Purpose:
 An API Gateway acts as a single entry point for all client requests in a microservices architecture, handling routing, security, rate limiting, and other cross-cutting concerns.
 
@@ -76,7 +78,7 @@ AWS API Gateway
 How They Work Together
 In a microservices architecture, these components complement each other:
 
-Eureka (Service Discovery):
+**Eureka (Service Discovery):**
 
 Keeps track of available service instances dynamically.
 Example: Order Service queries Eureka to find instances of Inventory Service.
@@ -84,7 +86,8 @@ Load Balancer:
 
 Distributes traffic among multiple instances of a service discovered through Eureka.
 Can be implemented on the client-side (via Ribbon, WebClient) or server-side (e.g., AWS ELB).
-API Gateway:
+
+**API Gateway:**
 
 Serves as the single entry point for clients.
 Uses Eureka to discover services and may delegate request routing and load balancing.
