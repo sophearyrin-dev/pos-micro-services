@@ -93,5 +93,30 @@ Serves as the single entry point for clients.
 Uses Eureka to discover services and may delegate request routing and load balancing.
 
 
+Resilience4j Circuit Breaker
+Resilience4j's Circuit Breaker:
+
+Monitors requests and responses to/from a service.
+Opens the circuit when a threshold of failures is reached.
+Prevents further calls to the failing service when the circuit is open.
+Periodically checks if the service is healthy and attempts to resume operations (half-open state).
+Key States of a Circuit Breaker
+CLOSED:
+
+Normal operation.
+All requests are allowed to pass through.
+Failures are counted. If the failure threshold is reached, the circuit transitions to OPEN.
+OPEN:
+
+Requests are short-circuited (not sent to the service).
+Any attempt to call the service fails immediately.
+After a defined wait time, the circuit transitions to HALF-OPEN.
+HALF-OPEN:
+
+A limited number of test requests are allowed to pass through.
+If the test requests succeed, the circuit transitions back to CLOSED.
+If the test requests fail, the circuit transitions back to OPEN.
+
+
 
 
