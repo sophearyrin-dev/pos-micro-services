@@ -117,6 +117,15 @@ A limited number of test requests are allowed to pass through.
 If the test requests succeed, the circuit transitions back to CLOSED.
 If the test requests fail, the circuit transitions back to OPEN.
 
+**Distributed Tracing**
+in Microservices is a technique used to monitor and observe requests as they travel through various services in a microservices architecture. This approach provides visibility into the execution path, performance, and dependencies of microservices, helping teams identify bottlenecks, failures, and latency issues.
+
+Key Concepts of Distributed Tracing:
+- Trace: A record of a request's journey through the system.
+- Span: Represents a single operation within a trace. A trace consists of multiple spans.
+- Trace ID: A unique identifier assigned to each request trace.
+- Parent and Child Relationships: Spans have hierarchical relationships representing the request flow.
+
 
 
 
