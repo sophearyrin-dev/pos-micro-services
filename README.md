@@ -132,6 +132,9 @@ Kafka
 - Topic: A category or feed name to which messages are sent by producers and from which messages are received by consumers.
 - Partition: Topics are split into partitions for scalability and fault tolerance.
 - Offset: A unique identifier for each message in a partition, used by consumers to keep track of their reading position.
+- 
+**A pipeline in CI/CD**
+   (Continuous Integration and Continuous Deployment) is an automated sequence of processes that developers use to build, test, and deploy software. It ensures that every code change is verified, integrated, and deployed efficiently and reliably, reducing manual intervention.
 
 
 
