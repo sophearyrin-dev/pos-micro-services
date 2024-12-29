@@ -126,6 +126,13 @@ Key Concepts of Distributed Tracing:
 - Trace ID: A unique identifier assigned to each request trace.
 - Parent and Child Relationships: Spans have hierarchical relationships representing the request flow.
 
+Kafka
+- Producer: The component that sends messages (or events) to Kafka topics.
+- Consumer: The component that reads messages from Kafka topics.
+- Topic: A category or feed name to which messages are sent by producers and from which messages are received by consumers.
+- Partition: Topics are split into partitions for scalability and fault tolerance.
+- Offset: A unique identifier for each message in a partition, used by consumers to keep track of their reading position.
+
 
 
 
