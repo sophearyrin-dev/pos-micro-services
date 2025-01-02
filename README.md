@@ -136,6 +136,8 @@ Kafka
 **A pipeline in CI/CD**
    (Continuous Integration and Continuous Deployment) is an automated sequence of processes that developers use to build, test, and deploy software. It ensures that every code change is verified, integrated, and deployed efficiently and reliably, reducing manual intervention.
 
+  # Agile
+
 
 
 
